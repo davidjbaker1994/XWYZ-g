@@ -3,13 +3,13 @@ import Header from "./header"
 import Footer from "./footer"
 import "../assets/styles.scss"
 
-const Layout = ({ hLogo, fLogo, children }) => (
+const Layout = ({ logo,  children }) => (
   <div id="layout">
-    <Header logo={hLogo} />
+    <Header logo={logo} />
     <main>
       {children}
     </main>
-    <Footer logo={fLogo} />
+    <Footer logo={logo}  />
   </div>
 );
 

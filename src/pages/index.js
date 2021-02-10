@@ -6,7 +6,7 @@ import AniMessage from "../components/AniMessage"
 import ContactForm from "../components/ContactForm"
 
 const IndexPage = ({ data }) => (
-  <Layout hLogo={data.xwyz_h_logo} fLogo={data.xwyz_f_logo}>
+  <Layout logo={data.xwyz}>
     <SEO title="Home" />
     <div id="outermost-flex-container">
       <div>
@@ -35,16 +35,9 @@ export default IndexPage
 
 export const query = graphql`
   query HomepageQuery {
-    xwyz_h_logo: file(relativePath: { eq: "images/xwyz-logo.png" }) {
+    xwyz: file(relativePath: { eq: "images/xwyz-logo.png" }) {
       childImageSharp {
-        fixed(width: 108, height: 37) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    xwyz_f_logo: file(relativePath: { eq: "images/xwyz-logo.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 100) {
+        fluid(maxWidth: 200) {
           ...GatsbyImageSharpFluid
         }
       }

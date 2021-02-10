@@ -7,7 +7,7 @@ const Footer = ({ logo }) => (
       <p>Sites x </p>
     </div>
     <div id="xwyz-logo">
-      <Img fluid={logo.childImageSharp.fluid} alt="Calhoun GA's Number 1 Web Developement Company" />
+      <Img fluid={logo.childImageSharp.fluid} alt="Calhoun GA's Top Web Design Company" />
     </div>
   </footer>
 );
