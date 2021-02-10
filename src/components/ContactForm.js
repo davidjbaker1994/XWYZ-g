@@ -64,7 +64,7 @@ const ContactForm = () => (
             name='message'
             id='message'
             placeholder='Message'
-            rows='4'
+            rows='6'
             onChange={handleChange}
           />
         </div>
