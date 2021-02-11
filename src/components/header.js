@@ -9,7 +9,7 @@ const Header = () => {
     query HeaderQuery {
       header_logo: file(relativePath: { eq: "xwyz-logo.png" }) {
         childImageSharp {
-          fixed(width: 102, height: 35) {
+          fixed(width: 90, height: 30) {
             ...GatsbyImageSharpFixed
           }
         }

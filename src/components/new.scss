@@ -96,7 +96,6 @@ header {
     }
   }
 }
-
 .dropdown-content {
   border-radius: 0px;
   background: white;
@@ -117,24 +116,19 @@ header {
   font-weight: 600;
   color: black;
 }
-
-#outermost-flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 100vh;
-  >div:nth-child(1) {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+//Top Section
+#top-section {
+  background: rgba($jaguar, .6);
+  padding-top: 30px;
+  #laptop-icon {
+    width: 180px;
+    margin: auto;
   }
-  >div:nth-child(2) {
-    flex: 1;
-    width: 90%;
+  #animated-message-container{
+    background: rgba(pink, .21);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 1rem;
     color: rgba(yellow, .9);
@@ -143,30 +137,27 @@ header {
       1px -1px 0 black,
       -1px 1px 0 red,
       1px 1px 0 black;
+    h1 {
+      width: 90%;
+      margin: auto;
+    }
   }
-  >div:nth-child(3) {
+  #fade-in-container {
     color: white;
     font-size: 15px;
     font-weight: bold;
-    flex: 1;
     width: 90%;
     margin: auto;
   }
-  >div:nth-child(4) {
-    flex: 2;
-    height: 100vh;
-    width: 100%;
-  }
 }
-#laptop-icon {
-  width: 180px;
-  margin-top: 30px;
+#contact-form-container {
+   
 }
-#animated-message-container {
-  h1 {
-    white-space: pre-line;
-  }
-}
+
+
+
+
+//Bottom Section
 
 //ContactForm
 #contact-form-container {
@@ -232,6 +223,13 @@ form {
   }
 }
 
+
+
+
+
+
+
+
 //Footer
 footer {
   color: white;
@@ -269,34 +267,4 @@ footer {
     word-spacing: 3px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Animations and KeyFrames 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-@keyframes blink {
-  from {opacity: 1;}
-  to {opacity: 0}
-}
-
-
 

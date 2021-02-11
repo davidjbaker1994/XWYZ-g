@@ -1,8 +1,9 @@
 import React from "react"
 import Header from "./header"
 import Footer from "./footer"
-import "./styles.scss"
-import "./styles-responsive.scss"
+//import "./styles.scss"
+//import "./styles-responsive.scss"
+import "./new.scss"
 
 const thisTrue = true;
 
