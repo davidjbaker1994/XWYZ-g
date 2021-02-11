@@ -6,8 +6,6 @@ import "../assets/styles-responsive.scss"
 
 const Layout = ({ hLogo, fLogo,  children }) => (
   <div id="layout">
-    {console.log(hLogo.fixed)}
-    {console.log(fLogo.fixed)}
     <Header logo={hLogo.fixed}  />
     <main>
       {children}
