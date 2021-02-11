@@ -26,7 +26,7 @@ const ContactForm = () => (
             our GitHub demo does not provide a response.
           </p>
         )}
-        <div>
+        <div id="first-name">
           <input
             type='text'
             name='first_name'
@@ -34,7 +34,7 @@ const ContactForm = () => (
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div id="last-name">
           <input
             type='text'
             name='last_name'
