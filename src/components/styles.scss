@@ -166,6 +166,11 @@ header {
   width: 180px;
   margin-top: 30px;
 }
+#animated-message-container {
+  h1 {
+    white-space: pre-line;
+  }
+}
 
 //ContactForm
 #contact-form-container {
