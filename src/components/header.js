@@ -11,7 +11,7 @@ const Header = ({ logo }) => (
         <a className="dropdown-item nav__link" href="https://tbakerortho.com">
         Baker Orthodontics</a>
       </Dropdown>
-      <Img fluid={logo.childImageSharp.fluid} alt="XWYZ Designs" />
+      <Img fixed={logo} alt="XWYZ Designs" />
     </div>
   </header>
 );

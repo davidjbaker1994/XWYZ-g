@@ -6,28 +6,15 @@ import AniMessage from "../components/AniMessage"
 import ContactForm from "../components/ContactForm"
 
 const IndexPage = ({ data }) => {
-  const lapTop = [
-    data.laptop.childImageSharp.fixed,
-    {
-      ...data.laptopsm.childImageSharp.fixed,
-      media: `(min-width: 360px)`,
-    },
-    {
-      ...data.laptoplg.childImageSharp.fixed,
-      media: `(min-width: 411px)`
-    },
-    {
-      ...data.laptopxl.childImageSharp.fixed,
-      media: `(min-width: 750px)`
-    }
-  ]
-  return (
-    <Layout logo={data.xwyz}>
+    return (
+    <Layout 
+      hLogo={data.header_logo.childImageSharp}
+      fLogo={data.footer_logo.childImageSharp} >
       <SEO title="Home" />
       <div id="outermost-flex-container">
         <div>
           <div id="laptop-icon">
-            <Img fixed={lapTop} alt="laptop icon" />
+            <Img fluid={data.laptop.childImageSharp.fluid} alt="laptop icon" />
           </div>
         </div>
         <div>
@@ -45,49 +32,34 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
     </Layout>
-  ); 
+    );
 }
 
 export default IndexPage;
 
 export const query = graphql`
   query HomepageQuery {
-    xwyz: file(relativePath: { eq: "images/xwyz-logo.png" }) {
+    header_logo: file(relativePath: { eq: "images/xwyz-logo.png" }) {
       childImageSharp {
-        fluid(maxWidth: 200) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 102, height: 35) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    footer_logo: file(relativePath: { eq: "images/xwyz-logo.png" }) {
+      childImageSharp {
+        fixed(width: 60, height: 21) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
     laptop: file(relativePath: { eq: "images/laptop.png" }) {
       childImageSharp {
-        fixed(width: 180, height: 112) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    laptopsm: file(relativePath: { eq: "images/laptop.png" }) {
-      childImageSharp {
-        fixed(width: 210, height: 130) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    laptoplg: file(relativePath: { eq: "images/laptop.png" }) {
-      childImageSharp {
-        fixed(width: 270, height: 144) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    laptopxl: file(relativePath: { eq: "images/laptop.png" }) {
-      childImageSharp {
-        fixed(width: 450, height: 279) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
   }
 `;
-
 

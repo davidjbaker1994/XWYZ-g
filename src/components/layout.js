@@ -4,13 +4,15 @@ import Footer from "./footer"
 import "../assets/styles.scss"
 import "../assets/styles-responsive.scss"
 
-const Layout = ({ logo,  children }) => (
+const Layout = ({ hLogo, fLogo,  children }) => (
   <div id="layout">
-    <Header logo={logo} />
+    {console.log(hLogo.fixed)}
+    {console.log(fLogo.fixed)}
+    <Header logo={hLogo.fixed}  />
     <main>
       {children}
     </main>
-    <Footer logo={logo}  />
+    <Footer logo={fLogo.fixed}  />
   </div>
 );
 
