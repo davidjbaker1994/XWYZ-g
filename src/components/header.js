@@ -2,18 +2,32 @@
 import React from "react"
 import Img from "gatsby-image"
 import Dropdown from "./dropdown"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Header = ({ logo }) => (
-  <header>
-    <div className="flex-c">
-      <Dropdown>
-        <a className="dropdown-item nav__link" href="https://canvas-craze.com">Canvas Craze</a>
-        <a className="dropdown-item nav__link" href="https://tbakerortho.com">
-        Baker Orthodontics</a>
-      </Dropdown>
-      <Img fixed={logo} alt="XWYZ Designs" />
-    </div>
-  </header>
-);
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      header_logo: file(relativePath: { eq: "xwyz-logo.png" }) {
+        childImageSharp {
+          fixed(width: 102, height: 35) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }`
+  );
+  return(
+    <header>
+      <div className="flex-c">
+        <Dropdown>
+          <a className="dropdown-item nav__link" href="https://canvas-craze.com">Canvas Craze</a>
+          <a className="dropdown-item nav__link" href="https://tbakerortho.com">
+          Baker Orthodontics</a>
+        </Dropdown>
+        <Img fixed={data.header_logo.childImageSharp.fixed} alt="XWYZ Designs" />
+      </div>
+    </header>
+  );
+}
 
 export default Header;

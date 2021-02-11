@@ -16,7 +16,7 @@ $lightergreen: rgb(93,137,91);
 
 body {
   background: black;
-  background: linear-gradient(rgba(0,0,0,.6) 72%, rgba($olive,.3)), url('./images/grid.jpeg');
+  background: linear-gradient(rgba(0,0,0,.6) 72%, rgba($olive,.3)), url('../images/grid.jpeg');
   background-attachment: fixed;
   background-repeat: repeat;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;

@@ -8,9 +8,7 @@ import ContactForm from "../components/ContactForm"
 
 const IndexPage = ({ data }) => {
     return (
-    <Layout 
-      hLogo={data.header_logo.childImageSharp}
-      fLogo={data.footer_logo.childImageSharp} >
+    <Layout>
       <SEO title="Home" />
       <div id="outermost-flex-container">
         <div>
@@ -40,20 +38,6 @@ export default IndexPage;
 
 export const query = graphql`
   query HomepageQuery {
-    header_logo: file(relativePath: { eq: "xwyz-logo.png" }) {
-      childImageSharp {
-        fixed(width: 102, height: 35) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    footer_logo: file(relativePath: { eq: "xwyz-logo.png" }) {
-      childImageSharp {
-        fixed(width: 60, height: 21) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     laptop: file(relativePath: { eq: "laptop.png" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
