@@ -123,6 +123,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-height: 100vh;
   >div:nth-child(1) {
     background: rgba(pink, .21);
     flex: 1;

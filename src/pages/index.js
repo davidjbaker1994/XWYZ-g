@@ -40,21 +40,21 @@ export default IndexPage;
 
 export const query = graphql`
   query HomepageQuery {
-    header_logo: file(relativePath: { eq: "images/xwyz-logo.png" }) {
+    header_logo: file(relativePath: { eq: "xwyz-logo.png" }) {
       childImageSharp {
         fixed(width: 102, height: 35) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    footer_logo: file(relativePath: { eq: "images/xwyz-logo.png" }) {
+    footer_logo: file(relativePath: { eq: "xwyz-logo.png" }) {
       childImageSharp {
         fixed(width: 60, height: 21) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    laptop: file(relativePath: { eq: "images/laptop.png" }) {
+    laptop: file(relativePath: { eq: "laptop.png" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
