@@ -33,9 +33,10 @@ body {
   padding-bottom: 54px;
   width: 100%;
   height: 100%;
-  .particles-js {
+  >div:nth-child(1){
     position: absolute;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     bottom: 0;
     right: 0;      
     z-index: 0;
@@ -98,7 +99,6 @@ header {
       margin: auto;
       color: white;
       font-weight: 500;
-      margin-top: 21px;
     }
     .dropdown-content {
       display: none;
