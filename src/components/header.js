@@ -16,13 +16,19 @@ const Header = () => {
       }
     }`
   );
+
+  //const dcaron = String.fromCharCode
+ 
   return(
     <header>
       <div className="flex-c">
-        <Dropdown>
-          <a className="dropdown-item nav__link" href="https://canvas-craze.com">Canvas Craze</a>
-          <a className="dropdown-item nav__link" href="https://tbakerortho.com">
+        <Dropdown ddIcon={' ˬ'}>
+          <ul>
+            <li><a href="https://canvas-craze.com">Canvas Craze</a></li>
+            <li><a href="https://tbakerortho.com">
           Baker Orthodontics</a>
+            </li>
+          </ul>
         </Dropdown>
         <Img fixed={data.header_logo.childImageSharp.fixed} alt="XWYZ Designs" />
       </div>

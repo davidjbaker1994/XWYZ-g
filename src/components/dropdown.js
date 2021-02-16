@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Dropdown = ({ children }) => (
+const pfcarrot = `^`;
+
+const Dropdown = ({ddIcon, children }) => (
   <div className="dropdown">
-    <span>Some Websites *</span>
+    Some Websites
+    <button id="dd-btn">
+      {pfcarrot || ddIcon}
+    </button>
     <div className="dropdown-content" role="menu">
       {children}
     </div>
