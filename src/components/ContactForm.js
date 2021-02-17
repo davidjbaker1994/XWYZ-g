@@ -1,8 +1,11 @@
 import React from "react"
 import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 
-const ContactForm = () => (
-  <div id="contact-form-container">
+const ContactForm = (props) => (
+  <div 
+    id="contact-form-container"
+    className={props.className}
+    >
     <NetlifyForm
       name='Contact'
       action='/thanks'
