@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 import AniMessage from "../components/AniMessage"
 import ContactForm from "../components/ContactForm"
 
+
 const IndexPage = ({ data }) => {
   const [animationCompleted, setAnimationCompleted] = useState(false);
 
@@ -18,7 +19,6 @@ const IndexPage = ({ data }) => {
     setAnimationCompleted(newValue);
   }
   
-
   return (
     <Layout>
       <SEO title="Home" />
