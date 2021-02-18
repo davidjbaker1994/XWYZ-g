@@ -40,6 +40,7 @@ const ParticleBg = () => {
     console.log(state.numberOfParticles);
     return (
       <Particles
+        className="show"
         params={{
          // fpsLimit: this.state.fPSLimit, //You could try changing this around to see if it explains
           //why the react-js-particles is working better than the vue ones in 

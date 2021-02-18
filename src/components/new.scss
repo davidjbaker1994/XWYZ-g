@@ -40,6 +40,23 @@ body {
     bottom: 0;
     right: 0;      
     z-index: 0;
+    visibility: hidden;
+    &.show {
+      visibility: visible;
+      opacity: 0;
+      -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      -moz-animation:fadeIn ease-in 1;
+      animation:fadeIn ease-in 1;
+      -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-fill-mode:forwards;
+      animation-fill-mode:forwards;
+      -webkit-animation-duration:3s;
+      -moz-animation-duration:3s;
+      animation-duration:3s;
+      -webkit-animation-delay: 1.5s;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-delay:1.5s;
+      animation-delay:1.5s;
+    }
   }
 }
   
@@ -69,7 +86,7 @@ header {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    width: 96%;
+    width: 93%;
     height: 100%;
   }
   .dropdown {
@@ -154,9 +171,12 @@ header {
   margin: auto;
 }
 #animated-message-container {
+  background: green;
+  padding: 0px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column; //row;
+  justify-content: flex-start;
+  align-items: center;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: .9rem;
   color: rgba(yellow, .9);
@@ -165,8 +185,11 @@ header {
     1px -1px 0 black,
     -1px 1px 0 red,
     1px 1px 0 black;
+  height: 90px;
   h1 {
     width: 84%;
+    background: blue;
+    margin: 9px 0px 0px;
   }
 }
 #fade-in-container {
