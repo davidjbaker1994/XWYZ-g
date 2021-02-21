@@ -36,9 +36,11 @@ const AniMessage = ({ handleAnimationCompleted }) => {
 
   return (
     <div id="animated-message-container">
-      <h1>
-        {`${slogan1.substring(0, subIndex)}${blink ? "|" : " "}`}
-      </h1>
+      <div>
+        <h1>
+          {`${slogan1.substring(0, subIndex)}${blink ? "|" : " "}`}
+        </h1>
+      </div>
     </div>
   );
 }

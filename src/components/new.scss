@@ -1,6 +1,19 @@
+/*
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+font-family: 'Dosis', sans-serif;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Ubuntu Condensed', sans-serif;
+*/
+
+/*
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Source+Code+Pro&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+
+
+
+*/
 
 //Variables
 $jaguar: rgb(18, 3, 33);
@@ -87,12 +100,15 @@ header {
     justify-content: space-between;
     margin: 0 auto;
     width: 93%;
+    max-width: 1440px;
     height: 100%;
   }
   .dropdown {
     height: 100%;
     color: white;
     position: relative;
+    font-family: "Source Code Pro", monospace;
+    word-spacing: 3px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -109,6 +125,7 @@ header {
       padding: 0px;
       text-align: center;
       transform: rotate(180deg);
+      margin-bottom: 2.4px;
       margin-left: 6px;
       font-size: 17px;
     }
@@ -164,32 +181,32 @@ header {
 
 //Top Section
 #outermost-flex-container {
-  padding-top: 30px;
+  width: 100%;
+  margin: 0;
+  max-width: 2100px;
 }
 #laptop-icon {
   width: 180px;
+  padding-top: 15px;
   margin: auto;
 }
 #animated-message-container {
-  background: green;
-  padding: 0px;
-  display: flex;
-  flex-direction: column; //row;
-  justify-content: flex-start;
-  align-items: center;
   font-family: 'Ubuntu Condensed', sans-serif;
-  font-size: .9rem;
+  font-size: .81rem;
   color: rgba(yellow, .9);
   text-shadow:
     -1px -1px 0 black,
     1px -1px 0 black,
     -1px 1px 0 red,
     1px 1px 0 black;
-  height: 90px;
-  h1 {
-    width: 84%;
-    background: blue;
-    margin: 9px 0px 0px;
+  height: 96px;
+  text-align: center;
+  >div:nth-child(1) {//THis more basic method seems to be working most
+    //consistenly so far
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+    width: 90%; 
   }
 }
 #fade-in-container {
@@ -201,9 +218,7 @@ header {
   margin: 0 auto;
   visibility: hidden;
   min-height: 96px;
-  //background: yellow;
   p {
-   // background: blue;
     width: 90%;
     margin: auto;
   }
@@ -291,13 +306,6 @@ form {
   }
 }
 
-
-
-
-
-
-
-
 //Footer
 footer {
   color: white;
@@ -306,7 +314,6 @@ footer {
   left: 0;
   right: 0;
   z-index: 1000 !important;
-  align-items: center;
   background: rgba(0,0,0,1);
   background-image: linear-gradient(rgba(0,0,0,.72), rgba(3,3,3,.6));
   border-top: 1.5px inset white;
@@ -314,6 +321,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   &:before {
     content: '';
     position: absolute;
