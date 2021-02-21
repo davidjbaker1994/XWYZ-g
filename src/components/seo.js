@@ -71,14 +71,6 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `viewport`,
           content: `width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"`
-        },
-        {
-          rel: `preconnect`,
-          href: `https://fonts.gstatic.com`
-        },
-        {
-          href: `https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Source+Code+Pro&family=Ubuntu+Condensed&display=swap`,
-          rel: `stylesheet`
         }
       ].concat(meta)}
     />
