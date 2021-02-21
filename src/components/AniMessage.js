@@ -33,12 +33,12 @@ const AniMessage = ({ handleAnimationCompleted }) => {
     }, 500);
     return () => clearTimeout(timeout2);
   }, [blink]);
-
+  //${blink ? "|" : " "}`}
   return (
     <div id="animated-message-container">
       <div>
         <h1>
-          {`${slogan1.substring(0, subIndex)}${blink ? "|" : " "}`}
+          {`${slogan1.substring(0, subIndex)}`}<span style={{opacity: blink ? '1' : '0'}}>|</span>
         </h1>
       </div>
     </div>
