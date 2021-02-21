@@ -23,7 +23,10 @@
     background: rgba(blue, .21);
     >div:nth-child(1) {
       background: rgba(pink, .3);
-      width: 78%;
+      h1 {
+        background: rgba(green, .3);
+        margin-left: 24px;
+      }
     }
   }
   #laptop-icon {
