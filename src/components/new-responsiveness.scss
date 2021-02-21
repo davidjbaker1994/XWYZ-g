@@ -19,6 +19,13 @@
 }
 
 @media only screen and (min-width: 375px) {
+  #animated-message-container {
+    background: rgba(blue, .21);
+    >div:nth-child(1) {
+      background: rgba(pink, .3);
+      width: 78%;
+    }
+  }
   #laptop-icon {
     padding-top: 21px;
     width: 210px;
