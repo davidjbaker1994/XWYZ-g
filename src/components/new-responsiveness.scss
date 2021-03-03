@@ -20,14 +20,12 @@
 
 @media only screen and (min-width: 375px) {
   #animated-message-container {
-    background: rgba(blue, .21);
-    //font-size: 15px;
     >div:nth-child(1) {
       background: rgba(pink, .3);
-      h1 {
-        background: rgba(green, .3);
-        padding-left: 21px;
-      }
+    }
+    h1 {
+      background: rgba(green, .3);
+      padding-left: 12px;
     }
   }
   #laptop-icon {
@@ -56,7 +54,7 @@
     //and so can be accounted for by eyeballing in all cases hopefully
     font-size: 1.2rem;
     h1 {
-      padding-left: 10px;
+      padding-left: 12px;
     }
   }
   #fade-in-container {
@@ -76,7 +74,7 @@
     height: 180px;
     font-size: 27px;
     >div:nth-child(1) {
-      width: 75%;
+      width: 84%;
     }
   }
   #fade-in-container {
@@ -163,7 +161,7 @@
   }
   #laptop-icon {
     width: 420px;
-    margin-right: 21px;
+    margin-right: 22px;//changed to make sure pushes
   }
   #animated-message-container {
     grid-column: 5 / span 4;
