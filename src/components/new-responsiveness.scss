@@ -20,11 +20,7 @@
 
 @media only screen and (min-width: 375px) {
   #animated-message-container {
-    >div:nth-child(1) {
-      background: rgba(pink, .3);
-    }
     h1 {
-      background: rgba(green, .3);
       padding-left: 12px;
     }
   }
@@ -49,9 +45,6 @@
   }
   #animated-message-container {
     height: 135px;
-    //most recent changes to font-size and h1 padding
-    //the jerky line breaking is because of cursor I think
-    //and so can be accounted for by eyeballing in all cases hopefully
     font-size: 1.2rem;
     h1 {
       padding-left: 12px;
