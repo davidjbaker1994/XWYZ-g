@@ -20,8 +20,13 @@
 
 @media only screen and (min-width: 375px) {
   #animated-message-container {
+    background: rgba(yellow, .21);
+    font-size: 18px;
     h1 {
-      padding-left: 12px;
+      background: rgba(blue, .21);
+      display: inline-block;
+      width: fit-content;
+      padding: 0px;
     }
   }
   #laptop-icon {
@@ -30,6 +35,7 @@
   }
   #fade-in-container {
     font-size: .9rem;
+    margin: 15px auto;
   }
 }
 @media only screen and (min-width: 375px) and (min-height: 804) {
