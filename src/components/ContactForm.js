@@ -19,15 +19,17 @@ const ContactForm = (props) => (
       <>
         <Honeypot />
         {success && (
-          <p>
-            Thanks for contacting us!
-          </p>
+          <div id="success-message">
+            <p>Thanks for contacting us!</p>
+          </div>
         )}
         {error && (
-          <p>
-            Sorry, we could not reach servers. Because it only works on Netlify,
-            our GitHub demo does not provide a response.
-          </p>
+          <div id="error=message">
+            <p>
+              Sorry, we could not reach servers. Because it only works on Netlify,
+              our GitHub demo does not provide a response.
+            </p>
+          </div>
         )}
         <div id="first-name">
           <input
