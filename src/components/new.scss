@@ -209,7 +209,7 @@ header {
   visibility: hidden;
   min-height: 96px;
   p {
-    width: 90%;
+    width: 87%;
     margin: auto;
   }
   &.show {
@@ -241,6 +241,7 @@ header {
   visibility: hidden;
   &.show {
     visibility: visible;
+    position: relative;
     opacity: 0;
     -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
     -moz-animation:fadeIn ease-in 1;
@@ -267,27 +268,6 @@ form {
   margin: auto;
   padding: 15px;
   max-width: 510px;
-  position: relative;
-  #success-message {
-    background: rgba(black, .6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    p {
-      background: white;
-      color: green;
-    }
-  }
-  #error-message {
-    background: rgba(black, .6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    p {
-      background: white;
-      color: green;
-    }
-  }
   input, textarea {
     border: 1.5px inset black;
     border-radius: 6px;
@@ -295,6 +275,7 @@ form {
     padding: 9px;
     width: 100%;
     font-size: 16px;
+    font-family: Arial !important;
     &:required {
       box-shadow: none !important;
     }
@@ -314,6 +295,75 @@ form {
     display: block;
     margin: auto;
     padding: .75em 0em;
+  }
+}
+
+.modal-message {
+  background: rgba(black, .6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: hidden;
+  >div {
+    border: yellow;
+    background: white;
+    border-width: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 96%;
+    margin: auto;
+    >div:nth-child(1) {
+      width: 100%;
+    }
+    >div:nth-child(2) {
+      border-left: 1px solid yellow;
+      border-right: 1px solid yellow;
+      box-shadow: 1.5px 0px 3px black inset,
+      -1.5px 0px 3px black inset;
+    }
+    >div:nth-child(3) {
+      width: 100%;
+      background: black;
+      border: 1px solid yellow;
+      padding: 6px;
+      text-align: right;
+    }
+  }
+  h3 {
+    background: black;
+    margin: 0px;
+    padding: 9px;
+    border: solid yellow 1px;
+    color: rgba(yellow, .9);
+    text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 red,
+      1px 1px 0 black;
+    width: 100%;
+  }
+  p {
+    color: black;
+    margin: 0px;
+    padding: 12px;
+  }
+  .close-btn {
+    background: black;
+    border: 1px solid yellow;
+    display: inline-block;
+    width: fit-content !important;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    color: white;
   }
 }
 

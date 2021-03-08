@@ -5,8 +5,8 @@ import SEO from "../components/seo"
 import Img from "gatsby-image"
 import ParticleBg from "../components/pBackground"
 import AniMessage from "../components/AniMessage"
-import ContactForm from "../components/ContactForm"
-
+//import ContactForm from "../components/ContactForm"
+import CForm from "../components/contact-form"
 
 let sTo;
 
@@ -55,7 +55,7 @@ const IndexPage = ({ data }) => {
               Full site coming soon! An engaging UI for navigating websites built by XWYZ Designs is among other features to be included. In the meantime, click on the above dropdown menu to view some great examples of our recent work. Please see the contact form below for business inquiries. 
             </p>
           </div>
-          <ContactForm className={showForm ? 'show' : ''} />
+          <CForm className={showForm ? 'show' : ''} />
       </div>
     </Layout>
   );
