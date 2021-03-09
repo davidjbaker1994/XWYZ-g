@@ -126,10 +126,11 @@ header {
     }
     .dropdown-content {
       display: none;
+      font-size: 15px;
       position: absolute;
       top: 45px;
       left: 0px;
-      width: 180px;
+      width: 210px;
       border-radius: 0px;
       background: white;
       border: 1.5px ridge $olive;
@@ -230,6 +231,8 @@ header {
   }
 }
 
+
+
 //Bottom Section
 
 //ContactForm
@@ -303,6 +306,8 @@ form {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   height: 100vh;
   z-index: 1000;
   display: flex;
@@ -317,7 +322,7 @@ form {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 96%;
+    //width: 96%;
     margin: auto;
     >div:nth-child(1) {
       width: 100%;
@@ -351,7 +356,6 @@ form {
   }
   p {
     color: black;
-    margin: 0px;
     padding: 12px;
   }
   .close-btn {
@@ -364,6 +368,22 @@ form {
     padding: 3px 6px;
     border-radius: 50%;
     color: white;
+  }
+  &.error {
+    h3 {
+      color: rgba(red, 1);
+      text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 rgba(yellow, .6),
+        1px 1px 0 black;
+      width: 100%;
+    }
+    >div {
+      >div:nth-child(2) {
+        width: 100%;
+      }
+    }
   }
 }
 

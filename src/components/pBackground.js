@@ -23,7 +23,7 @@ const ParticleBg = () => {
     setState({
       ...state,
       width: width,
-      numberOfParticles: (width < 510) ? 21 : (width < 930) ? 36 : 60,
+      numberOfParticles: (width < 510) ? 21 : (width < 930) ? 24 : 27, //36L60
       setUp: false
     });
   }
