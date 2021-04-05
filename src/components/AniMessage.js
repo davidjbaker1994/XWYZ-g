@@ -10,6 +10,7 @@ const slogan1 = 'Making Small Business Sites Great Again!';
 const AniMessage = ({ handleAnimationCompleted }) => {
   const [blink, setBlink] = useState(true);
   const [subIndex, setSubIndex] = useState(0);
+  let timeout;
 
   
   
@@ -18,10 +19,16 @@ const AniMessage = ({ handleAnimationCompleted }) => {
     if (subIndex === slogan1.length) {
       handleAnimationCompleted(true);
       return;
+    } else if (subIndex === 27) {
+      timeout = setTimeout(() => {
+        setSubIndex((prev) => prev + (1));
+      }, 3000);
+    } else {
+      timeout = setTimeout(() => {
+        setSubIndex((prev) => prev + (1));
+      }, Math.max(150, parseInt(Math.random() * 350)));
+
     }
-    const timeout = setTimeout(() => {
-      setSubIndex((prev) => prev + (1));
-    }, Math.max(150, parseInt(Math.random() * 350)));
     
     return () => clearTimeout(timeout);
   }, [subIndex]);

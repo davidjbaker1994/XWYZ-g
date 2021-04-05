@@ -4,8 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Img from "gatsby-image"
 import ParticleBg from "../components/pBackground"
-import AniMessage from "../components/AniMessage"
+//import AniMessage from "../components/AniMessage"
 //import ContactForm from "../components/ContactForm"
+import TypingEffect from "../components/typing-effect"
 import CForm from "../components/contact-form"
 
 let sTo;
@@ -30,6 +31,9 @@ const IndexPage = ({ data }) => {
   }
   */
 
+  /*
+
+  */
   function completedAnimation(newValue) {
     setAnimationCompleted(newValue);
   }
@@ -49,10 +53,17 @@ const IndexPage = ({ data }) => {
               <Img fluid={data.laptop.childImageSharp.fluid} alt="laptop icon" />
             </div>
           </div>
-          <AniMessage handleAnimationCompleted={completedAnimation} />
+         {/* <AniMessage handleAnimationCompleted={completedAnimation} />*/}
+         <TypingEffect handleAnimationCompleted={completedAnimation} />
           <div id="fade-in-container" className={animationCompleted ? 'show' : ''}>
             <p>
-              Full site coming soon! An engaging UI for navigating websites built by XWYZ Designs is among other features to be included. In the meantime, click on the above dropdown menu to view some great examples of our recent work. Please see the contact form below for business inquiries. 
+              Full site coming soon! <br></br> An engaging UI for navigating websites built by XWYZ Designs is among other features to be included. 
+            </p>
+            <p>
+              In the meantime, click on the above dropdown menu to view some great examples of our recent work.
+            </p>
+            <p>
+              Please see the contact form below for business inquiries. 
             </p>
           </div>
           <CForm className={showForm ? 'show' : ''} />

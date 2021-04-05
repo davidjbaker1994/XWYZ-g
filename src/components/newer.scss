@@ -181,8 +181,26 @@ header {
   padding-top: 15px;
   margin: auto;
 }
+#animated-message-container {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: .81rem;
+  color: rgba(yellow, .9);
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 red,
+    1px 1px 0 black;
+  height: 96px;
+  text-align: center;
+  >div:nth-child(1) {//THis more basic method seems to be working most
+    //consistenly so far
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+    width: 90%; 
+  }
+}
 #fade-in-container {
-  background: rgba(blue, .6);
   display: block;
   color: white;
   font-size: .81rem;
@@ -193,10 +211,7 @@ header {
   min-height: 96px;
   p {
     width: 87%;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 12px;
-    margin-left: auto;
+    margin: auto;
   }
   &.show {
     visibility: visible;
@@ -409,40 +424,3 @@ footer {
     word-spacing: 3px;
   }
 }
-
-.Typewriter {
-  background: rgba(green, .3);
-  width: 90%;
-  margin: auto;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-size: 1.5rem;
-  color: rgba(yellow, .9);
-  text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 red,
-    1px 1px 0 black;
-}
-#type-writer-container {
-  background: red;
-  min-height: 120px;
-  width: 100%;
-}
-
-//Animations and KeyFrames 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes darkIn {
-  from {
-    background: rgba(black, .1);
-    opacity: 0;
-  }
-  to {
-    background: rgba(black ,1);
-    opacity: 1;
-  }
-}
-
