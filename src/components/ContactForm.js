@@ -4,7 +4,7 @@ import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 const ContactForm = (props) => {
   const [showForm, setShowForm] = useState(true);
   const [showError, setShowError] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(true);
 
   if (!showForm && showSuccess) {
     return (
@@ -64,6 +64,19 @@ const ContactForm = (props) => {
           return (
             <>
             <Honeypot />
+            <div className="modal-message">
+            <div>
+              <h3>Your Message Was Sent Successfully!</h3>
+            </div>
+            <div>
+              <p>We appreciate your interest in our serivces! You should recieve a reply from us within one to two business days at the latest.</p>
+            </div>
+            <div>
+              <div className="close-btn" onClick={() => setShowForm(true)}>
+                X
+              </div>
+            </div>
+          </div>
             <div id="first-name">
               <input
                 type='text'
@@ -117,7 +130,6 @@ const ContactForm = (props) => {
       </NetlifyForm>
     </div>
     );
-  }
 }
 
 export default ContactForm;

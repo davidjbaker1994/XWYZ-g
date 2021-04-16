@@ -343,6 +343,80 @@ form {
   justify-content: center;
   overflow-y: hidden;
   >div {
+    border: 1px solid gray;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    //width: 96%;
+    margin: auto;
+    >div:nth-child(1) {
+      width: 100%;
+    }
+    >div:nth-child(2) {
+      
+    }
+    >div:nth-child(3) {
+      width: 100%;
+      padding: 6px;
+      text-align: right;
+    }
+  }
+  h3 {
+    background: white;
+    margin: 0px;
+    padding: 9px;
+    color: rgba(black, .9);
+    text-shadow: 1px 1px 1px yellow;
+    width: 100%;
+  }
+  p {
+    color: black;
+    padding: 12px;
+  }
+  .close-btn {
+    background: black;
+    border: 1px solid yellow;
+    display: inline-block;
+    width: fit-content !important;
+    line-height: 12px;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    color: white;
+  }
+  &.error {
+    h3 {
+      color: rgba(gray, 1);
+      text-shadow: 1px solid black;
+      width: 100%;
+    }
+    >div {
+      >div:nth-child(2) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+//Old styling
+/*
+.modal-message {
+  background: rgba(black, .6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: hidden;
+  >div {
     border: yellow;
     background: white;
     border-width: 9px;
@@ -414,7 +488,7 @@ form {
     }
   }
 }
-
+*/
 //Footer
 footer {
   color: white;

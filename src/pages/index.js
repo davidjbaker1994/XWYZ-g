@@ -65,6 +65,7 @@ const IndexPage = ({ data }) => {
 
           </div>
           <CForm className={showForm ? 'show' : ''} />
+          
       </div>
     </Layout>
   );
