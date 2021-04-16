@@ -11,6 +11,8 @@ $olive: rgb(128, 128, 0);
 $moneygreen: rgb(26,83,27);
 $superpalegreen: rgb(252,255,245);
 $lightergreen: rgb(93,137,91);
+$etonblue: rgb(150,200,162);
+$junglegreen: rgb(41,171,135);
 
 * {
   box-sizing: border-box;
@@ -98,6 +100,7 @@ header {
     color: white;
     position: relative;
     font-family: "Source Code Pro", monospace;
+    font-size: 15px;
     word-spacing: 3px;
     display: flex;
     flex-direction: row;
@@ -117,7 +120,7 @@ header {
       transform: rotate(180deg);
       margin-bottom: 2.4px;
       margin-left: 6px;
-      font-size: 17px;
+      font-size: 15px;
     }
     #dd-icon {
       margin: auto;
@@ -172,31 +175,68 @@ header {
 
 //Top Section
 #outermost-flex-container {
+  background: linear-gradient(transparent 90%, rgba($junglegreen,.15));
   width: 100%;
   margin: 0;
   max-width: 2100px;
+  display: grid;
+  grid-template-columns: repeat(10, 10);
+  grid-template-rows: repeat(20, 5%);
+  height: calc(200vh - 108px);
 }
 #laptop-icon {
   width: 180px;
-  padding-top: 15px;
-  margin: auto;
 }
+#laptop-container {
+  background: yellowgreen;
+  grid-column: 1 / span 10;
+  grid-row: 1 / span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Typewriter {
+  width: 90%;
+  margin: auto;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(yellow, .9);
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 red,
+    1px 1px 0 black;
+}
+#type-writer-container {
+  background: green;
+  grid-column: 1 / span 10;
+  grid-row: 4 / span 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 #fade-in-container {
-  background: rgba(blue, .6);
-  display: block;
+  grid-column: 1 / span 10;
+  grid-row: 5 / span 5;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   font-size: .81rem;
   font-weight: bold;
-  width: 100%;
-  margin: 0 auto;
+  height: 100%;
   visibility: hidden;
-  min-height: 96px;
-  p {
+  background: orange;
+  ul {
+    list-style: none;
+    padding: 0px;
     width: 87%;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 12px;
-    margin-left: auto;
+    li {
+      margin-bottom: 1rem;
+    }
   }
   &.show {
     visibility: visible;
@@ -222,11 +262,14 @@ header {
 
 //ContactForm
 #contact-form-container {
-  height: 480px;
+  grid-column: 1 / span 10;
+  grid-row: 10 / span 10;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   visibility: hidden;
+  background: red;
   &.show {
     visibility: visible;
     position: relative;
@@ -406,28 +449,12 @@ footer {
   }
   p {
     font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
     word-spacing: 3px;
   }
 }
 
-.Typewriter {
-  background: rgba(green, .3);
-  width: 90%;
-  margin: auto;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-size: 1.5rem;
-  color: rgba(yellow, .9);
-  text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 red,
-    1px 1px 0 black;
-}
-#type-writer-container {
-  background: red;
-  min-height: 120px;
-  width: 100%;
-}
+
 
 //Animations and KeyFrames 
 @keyframes fadeIn {

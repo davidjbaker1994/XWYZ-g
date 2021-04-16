@@ -86,14 +86,14 @@ const CForm = (props) => {
             placeholder="Last Name"
           />
         </div>
-        <div>
+        <div id="contact-email">
           <input
             type='text'
             name='email'
             placeholder="Email"
           />
         </div>
-        <div>
+        <div id="contact-subject">
           <input
             type='text'
             name='subject'

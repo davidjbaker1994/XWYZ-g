@@ -56,15 +56,13 @@ const IndexPage = ({ data }) => {
          {/* <AniMessage handleAnimationCompleted={completedAnimation} />*/}
          <TypingEffect handleAnimationCompleted={completedAnimation} />
           <div id="fade-in-container" className={animationCompleted ? 'show' : ''}>
-            <p>
-              Full site coming soon! <br></br> An engaging UI for navigating websites built by XWYZ Designs is among other features to be included. 
-            </p>
-            <p>
-              In the meantime, click on the above dropdown menu to view some great examples of our recent work.
-            </p>
-            <p>
-              Please see the contact form below for business inquiries. 
-            </p>
+            <ul>
+              <li>Full site coming soon! An engaging UI for navigating websites built by XWYZ Designs is among other features to be included. </li>
+              <li>In the meantime, click on the above dropdown menu to view some great examples of our recent work</li>
+              <li>Please see the contact form below for business inquiries. </li>
+            </ul>
+            
+
           </div>
           <CForm className={showForm ? 'show' : ''} />
       </div>
