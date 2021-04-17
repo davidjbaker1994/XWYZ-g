@@ -19,7 +19,7 @@ const CForm = (props) => {
     {
       setState({
         showForm: false,
-        showModal: 'error'
+        showModal: 'success'
       });
     })
     .catch((error) => setState({ showForm: false, showModal: 'error'}));
@@ -29,9 +29,9 @@ const CForm = (props) => {
     return (
       <div id="contact-form-container" className={props.className}>
         <div className="modal-message">
-          <div>
+          <div className="modal-body">
             <div>
-              <h3>Your Message Was Sent Successfully</h3>
+              <h3>Your Message Was Sent Successfully!</h3>
             </div>
             <div>
               <p>We appreciate your interest in our serivces! <br></br> You should recieve a reply from us within one to two business days at the latest.</p>
@@ -48,14 +48,14 @@ const CForm = (props) => {
   } else if (!state.showForm && state.showModal === 'error') {
     return (
       <div id="contact-form-container" className={props.className}>
-        <div className="modal-message error">
-          <div>
+        <div className="modal-message">
+          <div className="modal-body error">
             <div>
-              <h3>Unfortunately, there was an error submitting your message</h3>
+              <h3>Unfortunately, there was an error<br></br> submitting your message</h3>
             </div>
             <div>
               <p>
-                If this error persists, please feel free to email us directly  <a>here</a>
+                If this error persists, please feel free to email us directly  <a href="mailto:davidjbaker1994@gmail.com">here</a>.
               </p>
             </div>
             <div>

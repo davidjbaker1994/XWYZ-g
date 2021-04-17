@@ -188,13 +188,14 @@ header {
   width: 180px;
 }
 #laptop-container {
-  background: yellowgreen;
   grid-column: 1 / span 10;
   grid-row: 1 / span 3;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  height: 100%;
+  background: blue;
 }
 .Typewriter {
   width: 90%;
@@ -209,18 +210,20 @@ header {
     1px 1px 0 black;
 }
 #type-writer-container {
-  background: green;
   grid-column: 1 / span 10;
-  grid-row: 4 / span 1;
+  grid-row: 4 / span 2;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  background: green;
 }
-
 #fade-in-container {
   grid-column: 1 / span 10;
-  grid-row: 5 / span 5;
+  grid-row: 6 / span 5;
   color: white;
+  background: orange;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -229,7 +232,6 @@ header {
   font-weight: bold;
   height: 100%;
   visibility: hidden;
-  background: orange;
   ul {
     list-style: none;
     padding: 0px;
@@ -263,13 +265,13 @@ header {
 //ContactForm
 #contact-form-container {
   grid-column: 1 / span 10;
-  grid-row: 10 / span 10;
+  grid-row: 11 / span 10;
+  background: red;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   visibility: hidden;
-  background: red;
   &.show {
     visibility: visible;
     position: relative;
@@ -328,10 +330,8 @@ form {
     padding: .75em 0em;
   }
 }
-
 .modal-message {
   background: rgba(black, .6);
-  border-radius: 3px;
   position: fixed;
   top: 0;
   left: 0;
@@ -342,66 +342,49 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   overflow-y: hidden;
-  >div {
-    border: 1px solid green;
+  .modal-body {
     background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin: auto;
-    >div:nth-child(1) {
+    width: 510px;
+    border: 1px solid lightgreen;
+    background: white;
+    border-radius: 3px;
+    &.error {
+      border: 1px solid gray;
+      >div:nth-child(1) {
+        text-shadow: 1px 1px 1px black;
+        color: gray;
+      }
+    }
+    > div:nth-child(1) {
       color: black;
       text-shadow: 1px 1px 1px yellow;
       border-bottom: 1px solid black;
-      margin: auto;
-      width: 99%;
       h3 {
         margin: 3%;
       }
     }
     >div:nth-child(2) {
-      width: 99%;
       > p {
         width: 90%;
-      margin: auto;
-      margin: 3% auto;
+        margin: 3% auto;
       }
     }
-    >div:nth-child(3) {
-      width: 100%;
-      padding: 6px;
+    > div:nth-child(3) {
+      border-top: 1px solid black;
       text-align: right;
-    }
-  }
-  > div:nth-child(3) {
-    border-top: 1px solid black;
-    text-align: right;
-    width: 99%;
-    margin: auto;
-    .close-btn {
-      background: black;
-      border: 1px solid yellow;
-      display: inline-block;
-      width: fit-content !important;
-      line-height: 12px;
-      font-size: 12px;
-      padding: 3px 6px;
-      border-radius: 50%;
-      color: white;
-      margin: 3% 2%;
-    }
-  }
-  &.error {
-    h3 {
-      color: rgba(gray, 1);
-      text-shadow: 1px solid black;
-      width: 100%;
-    }
-    >div {
-      >div:nth-child(2) {
-        width: 100%;
+      .close-btn {
+        background: black;
+        border: 1px solid yellow;
+        display: inline-block;
+        width: fit-content !important;
+        line-height: 12px;
+        font-size: 12px;
+        padding: 3px 6px;
+        border-radius: 50%;
+        color: white;
+        margin: 3% 2%;
       }
     }
   }
