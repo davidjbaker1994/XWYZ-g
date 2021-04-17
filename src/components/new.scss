@@ -199,7 +199,6 @@ header {
 }
 .Typewriter {
   width: 90%;
-  margin: auto;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 1.5rem;
   color: rgba(yellow, .9);
@@ -208,16 +207,15 @@ header {
     1px -1px 0 black,
     -1px 1px 0 red,
     1px 1px 0 black;
+  position: absolute;
+  top: 0;
+  left: 3%;
 }
 #type-writer-container {
   grid-column: 1 / span 10;
   grid-row: 4 / span 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 100%;
   background: green;
+  position: relative;
 }
 #fade-in-container {
   grid-column: 1 / span 10;
