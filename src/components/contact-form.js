@@ -30,6 +30,7 @@ const CForm = (props) => {
       <div id="contact-form-container" className={props.className}>
         <div className="modal-message">
           <div className="modal-body">
+            <div className="modal-body-overlay"></div>
             <div>
               <h3>Your Message Was Sent Successfully!</h3>
             </div>
@@ -50,6 +51,7 @@ const CForm = (props) => {
       <div id="contact-form-container" className={props.className}>
         <div className="modal-message">
           <div className="modal-body error">
+            <div className="modal-body-overlay"></div>
             <div>
               <h3>Unfortunately, there was an error<br></br> submitting your message</h3>
             </div>

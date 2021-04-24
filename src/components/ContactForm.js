@@ -4,7 +4,7 @@ import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 const ContactForm = (props) => {
   const [showForm, setShowForm] = useState(true);
   const [showError, setShowError] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(true);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   if (!showForm && showSuccess) {
     return (
@@ -56,10 +56,10 @@ const ContactForm = (props) => {
       {({ handleChange, success, error }) => {
         if (success) {
           setShowForm(false);
-          setShowSuccess(true);
+          setShowError(true);
         } else if (error) {
           setShowForm(false);
-          setShowError(true);
+          setShowSuccess(true);
         } else {
           return (
             <>
