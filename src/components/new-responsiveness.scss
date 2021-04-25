@@ -28,10 +28,28 @@
   }
 }
 
+@media only screen and (min-width: 480px) {
+  #type-writer-container {
+    background: rgba(lightblue, .15);
+    padding-top: 1.5%;
+  }
+  .Typewriter {
+    font-size: 2.4rem;
+    background: red;
+    width: 84%;
+  }
+  #fade-in-container {
+    ul {
+      width: 75%;
+    }
+  }
+}
+
 
 @media only screen and (min-width: 600px) {
   #type-writer-container {
     padding-top: 1.2%;
+    background: yellow;
   }
   .Typewriter {
     font-size: 2.7rem;
@@ -52,77 +70,98 @@
   }
   #type-writer-container {
     margin-top: 0px;
-    padding-top: 0%;
+    background: rgba(blue, .15);
+    padding-top: 1.5%;
   }
   .Typewriter {
     width: 72%;
+    font-size: 3rem;
+    background: rgba(green, .15);
   }
   #fade-in-container {
+    font-size: 1.2rem;
+    justify-content: center;
     ul {
       width: 66%;
     }
   }
-  #contact-form-container {
-  }
 }
 
 @media only screen and (min-width: 800px) {
-  #laptop-container {
-    
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  #outermost-flex-container {
-    display: grid;
-    grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(10, 10%);
-    height: calc(200vh - 108px);
-  }
-  #laptop-container {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 2;
-    height: 100%;
-    width: 100%;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  #laptop-icon {
-    width: 300px;
-  }
   #type-writer-container {
-    position: relative;
-    grid-column: 5 / span 6;
-    grid-row: 1 / span 2;
-    height: 100%;
-    width: 100%;
+    background: rgba(pink, .15);
+    padding-top: 1.5%;
   }
   .Typewriter {
     font-size: 3rem;
-    margin: 0% 0px 0px 6%;
-    position: absolute;
-    bottom: 21%; 
-    left: 0px;
-  }
-  #fade-in-container {
-    grid-column: 1 / span 10;
-    grid-row: 3 / span 3;
-    height: 100%;
-    justify-content: center;
-    font-size: 1.2rem;
-  }
-  #contact-form-container {
-    grid-column: 1 / span 10;
-    grid-row: 6 / span 5;
-    height: 100%;
-    width: 100%;
-    justify-content: flex-start;
   }
 }
 
+@media only screen and (min-width: 999px) {
+  #outermost-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: unset;
+  }
+  #laptop-container {
+    background: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 300px;
+    width: 45vw;
+    margin: 0px;
+    padding-right: 3%;
+  }
+  #laptop-icon {
+    width: 390px;
+  }
+  #type-writer-container {
+    display: inline-block;
+    position: relative;
+    height: 300px;
+    width: 50vw;
+    padding: 0px;
+    margin: 0px;
+  }
+  .Typewriter {
+    background: lightgreen;
+    position: absolute;
+    top: 27%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    font-size: 3.9rem;
+    margin-top: auto;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    width: 100%;
+  }
+  #fade-in-container {
+    background: rgba(orange, .6);
+    height: 300px;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 0px;
+    ul {
+      margin: 0 auto;
+    }
+  }
+  #contact-form-container {
+    background: rgba(pink, .15);
+    width: 100%;
+    height: calc(100vh - 108px);
+  }
 
-@media only screen and (min-width: 1350px) {
+}
+
+
+@media only screen and (min-width: 1410px) {
   #outermost-flex-container {
     grid-template-columns: repeat(33, 3.33%);
     grid-template-rows: repeat(10, 10%);
@@ -157,7 +196,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    padding: 0px;
     ul {
       width: 78%;
       margin: 0px;

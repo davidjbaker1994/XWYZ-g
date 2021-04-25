@@ -22,11 +22,11 @@ const AniMessage = ({ handleAnimationCompleted }) => {
     } else if (subIndex === 27) {
       timeout = setTimeout(() => {
         setSubIndex((prev) => prev + (1));
-      }, 3000);
+      }, 2100);
     } else {
       timeout = setTimeout(() => {
         setSubIndex((prev) => prev + (1));
-      }, Math.max(150, parseInt(Math.random() * 350)));
+      }, Math.max(120, parseInt(Math.random() * 240)));
 
     }
     
