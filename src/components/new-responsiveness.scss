@@ -14,6 +14,9 @@
   #fade-in-container {
     font-size: .9rem;
   }
+  .Typewriter {
+    font-size: 1.92rem;
+  }
 }
 
 @media only screen and (min-width: 411px) {
@@ -30,12 +33,10 @@
 
 @media only screen and (min-width: 480px) {
   #type-writer-container {
-    background: rgba(lightblue, .15);
     padding-top: 1.5%;
   }
   .Typewriter {
     font-size: 2.4rem;
-    background: red;
     width: 84%;
   }
   #fade-in-container {
@@ -49,7 +50,6 @@
 @media only screen and (min-width: 600px) {
   #type-writer-container {
     padding-top: 1.2%;
-    background: yellow;
   }
   .Typewriter {
     font-size: 2.7rem;
@@ -69,14 +69,11 @@
     width: 270px;
   }
   #type-writer-container {
-    margin-top: 0px;
-    background: rgba(blue, .15);
     padding-top: 1.5%;
   }
   .Typewriter {
     width: 72%;
     font-size: 3rem;
-    background: rgba(green, .15);
   }
   #fade-in-container {
     font-size: 1.2rem;
@@ -89,7 +86,6 @@
 
 @media only screen and (min-width: 800px) {
   #type-writer-container {
-    background: rgba(pink, .15);
     padding-top: 1.5%;
   }
   .Typewriter {
@@ -107,7 +103,6 @@
     height: unset;
   }
   #laptop-container {
-    background: red;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -124,12 +119,9 @@
     display: inline-block;
     position: relative;
     height: 300px;
-    width: 50vw;
-    padding: 0px;
-    margin: 0px;
+    width: 52vw;
   }
   .Typewriter {
-    background: lightgreen;
     position: absolute;
     top: 27%;
     left: 0%;
@@ -143,7 +135,6 @@
     width: 100%;
   }
   #fade-in-container {
-    background: rgba(orange, .6);
     height: 300px;
     width: 100%;
     font-size: 1.5rem;
@@ -153,7 +144,6 @@
     }
   }
   #contact-form-container {
-    background: rgba(pink, .15);
     width: 100%;
     height: calc(100vh - 108px);
   }
@@ -163,13 +153,16 @@
 
 @media only screen and (min-width: 1410px) {
   #outermost-flex-container {
-    grid-template-columns: repeat(33, 3.33%);
-    grid-template-rows: repeat(10, 10%);
+    display: grid;
+    grid-template-columns: repeat(50, 2%);
+    grid-template-rows: repeat(25, 4%);
     height: calc(100vh - 108px);
   }
   #laptop-container {
-    grid-column: 1 / span 14;
-    grid-row: 1 / span 5;
+    grid-column: 1 / span 21;
+    grid-row: 1 / span 12;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     justify-content:flex-end;
     padding-right: 7.5%;
@@ -178,24 +171,31 @@
     width: 390px;
   }
   #type-writer-container {
-    grid-column: 15 / span 18;
-    grid-row: 1 / span 3;
+    grid-column: 22 / span 29;
+    grid-row: 1 / span 6;
+    height: 100%;
+    width: 100%;
   }
   .Typewriter {
+    background: red;
     font-size: 3rem;
     margin-left: 0px;
     margin-top: 0px;
-    width: 60%;
+    width: unset;
+    top: 27%;
+    right: 36%;
+    bottom: 0%;
     left: 0%;
-    bottom: 9%;
   }
   #fade-in-container {
-    grid-column: 15 / span 18;
-    grid-row: 4 / span 1;
+    grid-column: 22 / span 29;
+    grid-row: 7 / span 4;
     font-size: 1rem;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
+    height: 100%;
+    width: 100%;
     ul {
       width: 78%;
       margin: 0px;
@@ -205,8 +205,10 @@
     }
   }
   #contact-form-container {
-    grid-column: 15 / span 18;
-    grid-row: 5 / span 6;
+    grid-column: 22 / span 28;
+    grid-row: 11 / span 15;
+    height: 100%;
+    width: 100%;
     padding-top: 6%;
     padding-left: 7.5%;
   }
