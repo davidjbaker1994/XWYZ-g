@@ -74,6 +74,7 @@
   #type-writer-container {
     padding-top: 2.4%;
     background: rgba(green, .3);
+    height: 162px;
   }
   .Typewriter {
     background: pink;
@@ -83,7 +84,7 @@
   #fade-in-container {
     background: rgba(orange, .3);
     font-size: 24px;
-    justify-content: flex-start;
+    height: calc(70vh -270px);
     ul {
       width: 66%;
     }
