@@ -48,16 +48,12 @@
 
 
 @media only screen and (min-width: 600px) {
-  #type-writer-container {
-    padding-top: 1.2%;
-  }
   .Typewriter {
     font-size: 2.7rem;
   }
   #fade-in-container {
     font-size: 1.2rem;
     font-weight: 600;
-    justify-content: center;
     ul {
       width: 75%
     }
@@ -67,6 +63,7 @@
 @media only screen and (min-width: 750px) {
   #laptop-container {
     background: rgba(red, .3);
+    padding: 0px;
   }
   #laptop-icon {
     width: 42%;
@@ -74,7 +71,6 @@
   #type-writer-container {
     padding-top: 2.4%;
     background: rgba(green, .3);
-    height: 162px;
   }
   .Typewriter {
     background: pink;

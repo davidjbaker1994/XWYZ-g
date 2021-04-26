@@ -195,8 +195,8 @@ header {
   height: 30vh;
 }
 .Typewriter {
+  background: rgba(lightgreen, .3);
   vertical-align: text-top;
-  width: 90%;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 1.5rem;
   color: rgba(yellow, .9);
@@ -206,16 +206,21 @@ header {
     -1px 1px 0 rgba(red, .45),
     1px 1px 0 black,
     0px 0px 1px rgba(blue, .45);
-  margin: 0 auto;
+  position: absolute;
+  top: 0%;
+  left: 4.5%;
+  bottom: 0;
+  right: 4.5%;
 }
 #type-writer-container {
-  height: 90px;
+  position: relative;
+  height: 15vh;
   display: block;
   background: rgba(pink, .3);
 }
 #fade-in-container {
   background: rgba(green, .3);
-  height: calc(70vh - 198px);
+  height: calc(55vh - 108px);
   color: white;
   font-size: .81rem;
   font-weight: bold;
