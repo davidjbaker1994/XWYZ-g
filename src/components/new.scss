@@ -185,6 +185,7 @@ header {
 }
 #laptop-icon {
   width: 180px;
+  padding-bottom: 3%;
 }
 #laptop-container {
   display: flex;
@@ -208,17 +209,14 @@ header {
   margin: 0 auto;
 }
 #type-writer-container {
-  padding-top: 3%;
   height: 15vh;
   display: block;
+  background: rgba(pink, .3);
 }
 #fade-in-container {
+  background: rgba(green, .3);
   height: calc(55vh - 108px);
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   font-size: .81rem;
   font-weight: bold;
   visibility: hidden;
@@ -226,6 +224,7 @@ header {
     list-style: none;
     padding: 0px;
     width: 87%;
+    margin: 0px auto;
     li {
       margin-bottom: 1rem;
     }
