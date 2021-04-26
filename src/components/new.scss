@@ -181,11 +181,11 @@ header {
 #outermost-flex-container {
   width: 100%;
   margin: 0;
+  min-height: 960px;
   max-width: 2100px;
 }
 #laptop-icon {
   width: 180px;
-  padding-bottom: 3%;
 }
 #laptop-container {
   display: flex;
@@ -193,12 +193,12 @@ header {
   justify-content: flex-end;
   align-items: center;
   height: 30vh;
+  padding-bottom: 3%;
 }
 .Typewriter {
-  background: rgba(lightgreen, .3);
-  vertical-align: text-top;
   font-family: 'Ubuntu Condensed', sans-serif;
-  font-size: 1.5rem;
+  font-size: 27px;
+  font-weight: 500;
   color: rgba(yellow, .9);
   text-shadow:
     -1px -1px 0 black,
@@ -206,21 +206,15 @@ header {
     -1px 1px 0 rgba(red, .45),
     1px 1px 0 black,
     0px 0px 1px rgba(blue, .45);
-  position: absolute;
-  top: 0%;
-  left: 4.5%;
-  bottom: 0;
-  right: 4.5%;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 #type-writer-container {
-  position: relative;
   height: 12vh;
-  display: block;
-  background: rgba(pink, .3);
 }
 #fade-in-container {
-  background: rgba(green, .3);
-  height: calc(58vh - 108px);
+  height: calc(57vh - 108px);
   color: white;
   font-size: .81rem;
   font-weight: bold;
@@ -229,7 +223,7 @@ header {
   ul {
     list-style: none;
     padding: 0px;
-    width: 87%;
+    width: 84%;
     margin: 0px auto;
     li {
       margin-bottom: 1rem;

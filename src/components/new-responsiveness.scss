@@ -37,7 +37,6 @@
   }
   .Typewriter {
     font-size: 2.4rem;
-    width: 84%;
   }
   #fade-in-container {
     ul {
@@ -60,25 +59,70 @@
   }
 }
 
-@media only screen and (min-width: 750px) {
-  #laptop-container {
-    background: rgba(red, .3);
-    padding: 0px;
-  }
+//size test
+
+@media only screen and (min-width: 510px) {
   #laptop-icon {
-    width: 42%;
+    background: red;
+  }
+  .Typewriter {
+    width: 81%;
+    font-size: 2.7rem;
   }
   #type-writer-container {
-    padding-top: 2.4%;
-    background: rgba(green, .3);
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #laptop-icon {
+    background: yellow;
+  }
+  .Typewriter {
+    font-size: 3rem;
+    width: 84%;
+  }
+  #type-writer-container {
+    height: 15vh;
+  }
+}
+
+@media only screen and (min-width: 651px) {
+  #laptop-icon {
+    background: turquoise;
+  }
+  .Typewriter {
+    width: 78%;
+  }
+}
+
+@media only screen and (min-width: 690px) {
+  #laptop-icon {
+    background: orange;
+  }
+  .Typewriter {
+    width: 72%;
+  }
+  #fade-in-container {
+    ul {
+      width: 66%;
+    }
+  }
+}
+
+//
+
+@media only screen and (min-width: 750px) {
+  #type-writer-container {
+    height: 15vh;
+    padding-top: 0px;
   }
   .Typewriter {
     background: pink;
-    width: 72%;
     font-size: 3.3rem;
+    width: 75%;
   }
   #fade-in-container {
-    background: rgba(orange, .3);
     font-size: 24px;
     height: calc(70vh -270px);
     ul {
@@ -88,9 +132,6 @@
 }
 
 @media only screen and (min-width: 800px) {
-  #type-writer-container {
-    padding-top: 1.5%;
-  }
   .Typewriter {
     font-size: 3rem;
   }
@@ -103,43 +144,34 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    height: unset;
+    min-height: 1500px;
   }
   #laptop-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 300px;
-    width: 45vw;
+    width: 45%;
     margin: 0px;
-    padding-right: 3%;
+    height: 36vh;
     padding-bottom: 0%;
   }
   #laptop-icon {
-    width: 390px;
+    width: 360px;
   }
   #type-writer-container {
     display: inline-block;
-    position: relative;
-    height: 300px;
-    width: 52vw;
+    width: 55%;
+    height: 36vh;
   }
   .Typewriter {
-    position: absolute;
-    top: 27%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
-    font-size: 3.9rem;
-    margin-top: auto;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    margin-right: auto;
     width: 100%;
+    margin-top: 15%;
+    font-size: 3rem;
+    height: 45%;
   }
   #fade-in-container {
-    height: 300px;
+    height: calc(64vh);
     width: 100%;
     font-size: 1.5rem;
     margin-top: 0px;
@@ -151,15 +183,15 @@
     width: 100%;
     height: calc(100vh - 108px);
   }
-
 }
 
 
-@media only screen and (min-width: 1410px) {
+@media only screen and (min-width: 1350px) {
   #outermost-flex-container {
     display: grid;
     grid-template-columns: repeat(50, 2%);
     grid-template-rows: repeat(25, 4%);
+    min-height: unset;
     height: calc(100vh - 108px);
   }
   #laptop-container {
@@ -176,7 +208,7 @@
   }
   #type-writer-container {
     grid-column: 22 / span 29;
-    grid-row: 1 / span 6;
+    grid-row: 1 / span 10;
     height: 100%;
     width: 100%;
   }
@@ -184,16 +216,12 @@
     background: red;
     font-size: 3rem;
     margin-left: 0px;
-    margin-top: 0px;
-    width: unset;
-    top: 27%;
-    right: 36%;
-    bottom: 0%;
-    left: 0%;
+    margin-top: 9%;
+    width: 66%;
   }
   #fade-in-container {
     grid-column: 22 / span 29;
-    grid-row: 7 / span 4;
+    grid-row: 8 / span 2;
     font-size: 1rem;
     flex-direction: row;
     justify-content: flex-start;
@@ -209,7 +237,7 @@
     }
   }
   #contact-form-container {
-    grid-column: 22 / span 28;
+    grid-column: 22 / span 29;
     grid-row: 11 / span 15;
     height: 100%;
     width: 100%;
