@@ -65,19 +65,24 @@
 }
 
 @media only screen and (min-width: 750px) {
+  #laptop-container {
+    background: rgba(red, .3);
+  }
   #laptop-icon {
     width: 270px;
   }
   #type-writer-container {
-    padding-top: 1.5%;
+    padding-top: 2.4%;
+    background: rgba(green, .3);
   }
   .Typewriter {
     width: 72%;
     font-size: 3rem;
   }
   #fade-in-container {
-    font-size: 1.2rem;
-    justify-content: center;
+    background: rgba(orange, .3);
+    font-size: 21px;
+    justify-content: flex-start;
     ul {
       width: 66%;
     }
@@ -111,6 +116,7 @@
     width: 45vw;
     margin: 0px;
     padding-right: 3%;
+    padding-bottom: 0%;
   }
   #laptop-icon {
     width: 390px;
