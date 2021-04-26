@@ -32,9 +32,6 @@
 }
 
 @media only screen and (min-width: 480px) {
-  #type-writer-container {
-    padding-top: 1.5%;
-  }
   .Typewriter {
     font-size: 2.4rem;
   }
@@ -59,18 +56,17 @@
   }
 }
 
-//size test
 
 @media only screen and (min-width: 510px) {
   #laptop-icon {
     background: red;
   }
   .Typewriter {
-    width: 81%;
     font-size: 2.7rem;
+    background: rgba(yellow, .3);
   }
   #type-writer-container {
-    padding-top: 0px;
+    height: 15vh;
   }
 }
 
@@ -78,30 +74,17 @@
   #laptop-icon {
     background: yellow;
   }
-  .Typewriter {
-    font-size: 3rem;
-    width: 84%;
-  }
-  #type-writer-container {
-    height: 15vh;
-  }
 }
 
 @media only screen and (min-width: 651px) {
   #laptop-icon {
     background: turquoise;
   }
-  .Typewriter {
-    width: 78%;
-  }
 }
 
 @media only screen and (min-width: 690px) {
   #laptop-icon {
     background: orange;
-  }
-  .Typewriter {
-    width: 72%;
   }
   #fade-in-container {
     ul {
@@ -113,29 +96,27 @@
 //
 
 @media only screen and (min-width: 750px) {
-  #type-writer-container {
-    height: 15vh;
-    padding-top: 0px;
-  }
   .Typewriter {
     background: pink;
-    font-size: 3.3rem;
-    width: 75%;
+    font-size: 3.9rem;
   }
   #fade-in-container {
-    font-size: 24px;
+    font-size: 21px;
     height: calc(70vh -270px);
     ul {
-      width: 66%;
+      width: 63%;
     }
+  }
+  #laptop-icon {
+    width: 330px;
   }
 }
 
 @media only screen and (min-width: 800px) {
-  .Typewriter {
-    font-size: 3rem;
-  }
+  
 }
+
+/*
 
 @media only screen and (min-width: 999px) {
   #outermost-flex-container {
@@ -184,6 +165,31 @@
     height: calc(100vh - 108px);
   }
 }
+*/
+
+@media only screen and (min-width: 1024px) {
+  #outermost-flex-container {
+    min-height: 1200px;
+  }
+  #laptop-icon {
+    width: 420px;
+  }
+  .Typewriter {
+    font-size: 5.1rem;
+  }
+  #fade-in-container {
+    background: orange;
+    height: unset;
+  }
+  #contact-form-container {
+    background: violet;
+    height: unset;
+  }
+  
+
+  
+}
+
 
 
 @media only screen and (min-width: 1350px) {
