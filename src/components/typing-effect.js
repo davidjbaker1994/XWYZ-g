@@ -7,11 +7,12 @@ const TypingEffect = ({handleAnimationCompleted}) => (
     <Typewriter
       onInit={(typewriter) => {
       typewriter.typeString('Making Small Business Sites')
-      .pauseFor(1200)
-      .typeString(' Great Again!')
+      .pauseFor(1000)
       .callFunction(() => {
         handleAnimationCompleted(true);
       })
+      .pauseFor(200)
+      .typeString(' Great Again!')
       .start();
     }}/>
   </div>

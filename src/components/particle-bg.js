@@ -30,7 +30,7 @@ const ParticleBg = () => {
 
   useEffect(() => {
     if (state.width !== null && state.width === width) return;
-    sTo = setTimeout(setUp, 9000);
+    sTo = setTimeout(setUp, 900);
     return () => clearTimeout(sTo);
   }, [state]);
 
