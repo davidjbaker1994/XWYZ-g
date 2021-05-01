@@ -2,8 +2,18 @@
   #laptop-icon {
     width: 210px;
   }
+  #laptop-container {
+   // background: rgba(red, .3);
+  }
   .Typewriter {
     font-size: 1.8rem;
+   // background: rgba(green, .3);
+  }
+  #fade-in-container {
+   // background: rgba(orange, .3);
+  }
+  #contact-form-container {
+   // background: rgba(pink, .3);
   }
 }
 
@@ -31,163 +41,113 @@
   }
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 450px) {
   .Typewriter {
-    font-size: 2.4rem;
+   font-size: 2.55rem;
+  }
+}
+@media only screen and (min-width: 470px)
+  and (max-height: 1000px) {
+  #laptop-container {
+    height: 270px;
+  }
+  #laptop-icon {
+    width: 300px;
+  }
+  .Typewriter {
+    font-size: 42px;
+    width: 462px;
+    margin: 0 auto;
   }
   #fade-in-container {
+    //padding-top: 6%;
+    padding-top: 30px;
+    font-size: 16.2px;
     ul {
-      width: 75%;
+      width: 420px;
     }
   }
 }
 
 
-@media only screen and (min-width: 600px) {
-  .Typewriter {
-    font-size: 2.7rem;
-  }
-  #fade-in-container {
-    font-size: 1.2rem;
-    font-weight: 600;
-    ul {
-      width: 75%
-    }
-  }
-}
 
-
-@media only screen and (min-width: 510px) {
-  #laptop-icon {
-    background: red;
-  }
-  .Typewriter {
-    font-size: 2.7rem;
-    background: rgba(yellow, .3);
-  }
-  #type-writer-container {
-    height: 15vh;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  #laptop-icon {
-    background: yellow;
-  }
-}
-
-@media only screen and (min-width: 651px) {
-  #laptop-icon {
-    background: turquoise;
-  }
-}
-
-@media only screen and (min-width: 690px) {
-  #laptop-icon {
-    background: orange;
-  }
-  #fade-in-container {
-    ul {
-      width: 66%;
-    }
-  }
-}
-
-//
 
 @media only screen and (min-width: 750px) {
+  #laptop-icon {
+    width: 300px;
+  }
   .Typewriter {
-    background: pink;
-    font-size: 3.9rem;
+    font-size: 3.45rem;
+    width: 630px;
   }
   #fade-in-container {
-    font-size: 21px;
+    font-size: 1.8rem;
     height: calc(70vh -270px);
     ul {
-      width: 63%;
+      font-weight: 400;
+      width: 540px;
     }
   }
-  #laptop-icon {
-    width: 330px;
-  }
 }
-
-@media only screen and (min-width: 800px) {
-  
-}
-
-/*
-
-@media only screen and (min-width: 999px) {
-  #outermost-flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    min-height: 1500px;
-  }
+@media only screen and (min-width: 750px) 
+    and (max-height: 999px) {
   #laptop-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 45%;
-    margin: 0px;
-    height: 36vh;
-    padding-bottom: 0%;
+    height: 270px;
+    padding-bottom: 0px;
   }
   #laptop-icon {
     width: 360px;
   }
-  #type-writer-container {
-    display: inline-block;
-    width: 55%;
-    height: 36vh;
-  }
   .Typewriter {
-    width: 100%;
-    margin-top: 15%;
-    font-size: 3rem;
-    height: 45%;
+    //font-size: 2.7rem;
+    font-size: 54px;
+    width: 600px;
+  }
+  #type-writer-container {
+    height: 132px;
   }
   #fade-in-container {
-    height: calc(64vh);
-    width: 100%;
-    font-size: 1.5rem;
-    margin-top: 0px;
+    font-size: 18px;
+    font-weight: 600;
     ul {
-     margin: auto;
+      width: 540px;
     }
   }
-  #contact-form-container {
-    width: 100%;
-    height: calc(100vh - 108px);
-  }
 }
-*/
 
-@media only screen and (min-width: 1024px) {
-  #outermost-flex-container {
-    min-height: 1200px;
-  }
+@media only screen and (min-width: 1024px) and (min-height: 999px) {
   #laptop-icon {
-    width: 420px;
+    width: 450px;
   }
   .Typewriter {
-    font-size: 5.1rem;
+    font-size: 4.8rem;
+    width: 840px;
   }
   #fade-in-container {
-    background: orange;
-    height: unset;
+    font-size: 2.1rem;
+    ul {
+      width: 700px;
+    }
   }
-  #contact-form-container {
-    background: violet;
-    height: unset;
+}
+@media only screen and (min-width: 1020px) and (min-height: 1332px) {
+  form {
+    max-width: unset;
+    width: 720px !important;
+    padding: 30px;
+    input, textarea {
+      margin-bottom: 1.2em;
+      padding: 21px;
+      font-size: 21px;
+    }
+    ::placeholder {
+      color: rgba(0,0,0,1) !important;
+    }
+    button {
+      font-size: 1.2rem;
+      max-width: 210px;
+    }
   }
-  
-
-  
 }
 
 
@@ -202,10 +162,10 @@
   }
   #laptop-container {
     grid-column: 1 / span 21;
-    grid-row: 1 / span 12;
+    grid-row: 1 / span 14;
     height: 100%;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     justify-content:flex-end;
     padding-right: 7.5%;
   }
@@ -214,29 +174,32 @@
   }
   #type-writer-container {
     grid-column: 22 / span 29;
-    grid-row: 1 / span 10;
+    grid-row: 1 / span 8;
     height: 100%;
     width: 100%;
+    padding-bottom: 21px;
+    margin-top: 30px;
   }
   .Typewriter {
-    background: red;
-    font-size: 3rem;
+    width: 630px;
+    font-size: 3.6rem;
     margin-left: 0px;
-    margin-top: 9%;
-    width: 66%;
+    margin-top: 0%;
   }
   #fade-in-container {
     grid-column: 22 / span 29;
-    grid-row: 8 / span 2;
-    font-size: 1rem;
+    grid-row: 8 / span 4;
+    font-size: 18.3px;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
     height: 100%;
     width: 100%;
+    padding-top: 0px;
     ul {
-      width: 78%;
+      background: none;
       margin: 0px;
+      width: 780px;
       li {
         display: inline;
       }
@@ -247,7 +210,7 @@
     grid-row: 11 / span 15;
     height: 100%;
     width: 100%;
-    padding-top: 6%;
+    padding-top: 0%;
     padding-left: 7.5%;
   }
   form {

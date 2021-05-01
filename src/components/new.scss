@@ -212,7 +212,6 @@ header {
 }
 #type-writer-container {
   height: 12vh;
-  background: rgba(turquoise, .3);
 }
 #fade-in-container {
   height: calc(57vh - 108px);
@@ -349,10 +348,14 @@ form {
     }
     &.error {
       border: 1px solid gray;
+      .modal-body-overlay {
+        background: rgba(red, .15);
+      }
       >div:nth-child(2) {
         text-shadow: 1px 1px 1px black;
         h3 {
           color: gray;
+          background: none;
         }
       }
     }

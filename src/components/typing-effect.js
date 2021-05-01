@@ -2,23 +2,19 @@ import React from "react"
 import Typewriter from 'typewriter-effect';
 
 
-const TypingEffect = ({handleAnimationCompleted}) => {
-
-  return (
-    <div id="type-writer-container">
-     <Typewriter
-  onInit={(typewriter) => {
-    typewriter.typeString('Making Small Business Sites')
-      .pauseFor(2500)
+const TypingEffect = ({handleAnimationCompleted}) => (
+  <div id="type-writer-container">
+    <Typewriter
+      onInit={(typewriter) => {
+      typewriter.typeString('Making Small Business Sites')
+      .pauseFor(1200)
       .typeString(' Great Again!')
       .callFunction(() => {
         handleAnimationCompleted(true);
       })
       .start();
-  }}
-/>
-    </div>
-  );
-}
+    }}/>
+  </div>
+)
 
 export default TypingEffect;
