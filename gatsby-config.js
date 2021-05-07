@@ -17,34 +17,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `{
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-          }
-        }`
-      }
-    },
-    {
-      resolve: `gatsby-plugin-robots-txt`,
-      options: {
-        host: 'https://xwyz.co',
-        sitemap: 'https://xwyz.co/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    }
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`
   ],
 }
