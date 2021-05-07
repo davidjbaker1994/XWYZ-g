@@ -3,7 +3,7 @@ module.exports = {
     title: `XWYZ Designs`,
     description: `North Ga's New Cutting Edge Web Design Co.`,
     author: `XWYZ Designs`,
-    siteUrl: `https://xwyz.co/`
+    siteUrl: `https://xwyz.co`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,7 +17,34 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-robots-txt`
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `{
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+          }
+        }`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: 'https://xwyz.co',
+        sitemap: 'https://xwyz.co/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
   ],
 }
