@@ -3,6 +3,7 @@ module.exports = {
     title: `XWYZ Designs`,
     description: `North Ga's New Cutting Edge Web Design Co.`,
     author: `XWYZ Designs`,
+    siteUrl: `https://www.xwyz.co`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,6 +17,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`
   ],
 }
